@@ -1,0 +1,16 @@
+{
+  "name": "campus-lost-and-found",
+  "version": "1.0.0",
+  "description": "Full-stack Campus Lost & Found web app with private verifiable claims",
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build": "cd backend && npm run build && cd ../frontend && npm run build",
+    "test": "cd backend && npm run test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
+
